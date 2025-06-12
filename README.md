@@ -1,54 +1,90 @@
-# React + TypeScript + Vite
+# Stock UI Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React + TypeScript template built with Vite, designed for rapid development of modern admin dashboards and business applications.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** with **TypeScript**
+- **Vite** for fast development and builds
+- **Material UI (MUI)** for UI components and theming
+- **Redux Toolkit** for state management
+- **React Router v7** for routing
+- **Error Boundary** for graceful error handling
+- **React Toastify** for notifications
+- **Axios** for HTTP requests
+- **JWT Decode** for authentication token parsing
+- **CryptoJS** for encryption/decryption
+- **Project structure** with alias support (`@/` for `src/`)
+- **Linting** with ESLint
+- **Ready-to-use layout** with responsive sidebar and topbar
+- **Code splitting** with React Suspense and lazy loading
+- **Unit test ready** (add your preferred test runner)
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+src/
+  components/
+    errors/
+      ErrorBoundary.tsx
+    Layout.tsx
+  pages/
+    Dashboard.tsx
+    Login.tsx
+  redux/
+    store.ts
+  theme/
+    theme.ts
+  routes.tsx
+  App.tsx
+  main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Install dependencies:**
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+2. **Run the development server:**
+   ```sh
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+3. **Build for production:**
+   ```sh
+   npm run build
+   # or
+   yarn build
+   ```
+
+4. **Preview production build:**
+   ```sh
+   npm run preview
+   # or
+   yarn preview
+   ```
+
+## Customization
+
+- Update the sidebar and routes in `src/components/Layout.tsx` and `src/routes.tsx`.
+- Add new pages in `src/pages/`.
+- Update theme in `src/theme/theme.ts`.
+- Use the ErrorBoundary for robust error handling in your components.
+
+## Aliases
+
+- Use `@/` to import from `src/` (configured in `vite.config.ts` and `tsconfig.json`).
+
+## Linting
+
+- Run `npm run lint` to check code quality.
+
+---
+
+This template is ready for you to clone and start building your next admin dashboard or business app!
