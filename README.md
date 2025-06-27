@@ -1,4 +1,4 @@
-# React UI Template
+# React UI boilerplate
 
 This project is a React + TypeScript template built with Vite, designed for rapid development of modern admin dashboards and business applications.
 
