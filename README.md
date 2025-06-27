@@ -1,4 +1,4 @@
-# Stock UI Template
+# React UI Template
 
 This project is a React + TypeScript template built with Vite, designed for rapid development of modern admin dashboards and business applications.
 
